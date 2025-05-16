@@ -1,0 +1,7 @@
+{
+  "name": "Walme Token (Testnet)",
+  "symbol": "WLMt",
+  "description": "Testnet version of Walme’s governance and reward token",
+  "image": "https://raw.githubusercontent.com/walme-io/wlm-token/testnet/token-info/wlmt-logo.png",
+  "decimals": 6
+}
