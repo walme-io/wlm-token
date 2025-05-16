@@ -1,7 +1,7 @@
 {
   "name": "Walme Token (Testnet)",
   "symbol": "WLMt",
-  "description": "Testnet version of Walme’s governance and reward token",
-  "image": "https://raw.githubusercontent.com/walme-io/wlm-token/testnet/token-info/wlmt-logo.png",
+  "description": "WLMt is the testnet utility and governance token for Walme — a Web3 banking app enabling premium features, fee savings, and DAO participation.",
+  "image": "https://raw.githubusercontent.com/walme-io/wlm-token/refs/heads/devnet-v1/token-info/wlmt-logo.png",
   "decimals": 6
 }
