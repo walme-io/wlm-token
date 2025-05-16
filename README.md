@@ -11,9 +11,9 @@
 - **Token name:** Walme Test Token
 - **Symbol:** WLMt
 - **Decimals:** 6
-- **Mint Address:** `5GJUPERX...example...KZT`
+- **Mint Address:** ``
 - **Network:** Solana Devnet
-- **Supply:** 1,000,000,000 WLMt
+- **Supply:** 10,000,000,000 WLMt
 
 ---
 
