@@ -1,0 +1,35 @@
+# system / OS
+.DS_Store
+Thumbs.db
+
+# node / js / package
+node_modules/
+package-lock.json
+yarn.lock
+dist/
+build/
+
+# local env / auth
+.env
+.env.local
+.env.dev
+*.log
+
+# solana cli
+*.bak
+*.tmp
+.solana/
+wallet.json
+
+# editor folders
+.vscode/
+.idea/
+
+# backups / trash
+*.zip
+*.tar.gz
+*.swp
+
+# personal keypairs
+*.json
+!token-info/wlmt-metadata.json
