@@ -17,11 +17,13 @@
 
 ---
 
-## 🪪 Add to Phantom Wallet
+## 🪪 Add to Phantom Wallet (Recommended)
 
-You can add this token directly to your Phantom wallet using this link:
+We recommend using the [Phantom Wallet](https://phantom.app) for testing.
 
-**[➕ Add WLMt to Phantom Wallet](phantom://add-token?mint=BxHP1VmR3rd7fZWC5CE6cyzrY5mnKVJF1Lw4M5WZjqtj&symbol=WLMt&name=Walme%20Token%20(Testnet)&decimals=6)**
+You can add this token to your Phantom wallet using the link below:
+
+**[➕ Add WLMt to Phantom Wallet](https://tokensale.walme.io/phantom-add-wlmt.html)**
 
 > Works on mobile or desktop Phantom with deep link support.
 
