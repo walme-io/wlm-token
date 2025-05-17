@@ -8,12 +8,22 @@
 
 ## 🔧 Technical Details
 
-- **Token name:** Walme Test Token
-- **Symbol:** WLMt
-- **Decimals:** 6
-- **Mint Address:** `143sc8sqY32ZB7PiJXziffydcyTP9BXapb6QkUUXp97d`
-- **Network:** Solana Devnet
+- **Token name:** Walme Test Token  
+- **Symbol:** WLMt  
+- **Decimals:** 6  
+- **Mint Address:** `BxHP1VmR3rd7fZWC5CE6cyzrY5mnKVJF1Lw4M5WZjqtj`  
+- **Network:** Solana Devnet  
 - **Supply:** 10,000,000,000 WLMt
+
+---
+
+## 🪪 Add to Phantom Wallet
+
+You can add this token directly to your Phantom wallet using this link:
+
+**[➕ Add WLMt to Phantom Wallet](phantom://add-token?mint=BxHP1VmR3rd7fZWC5CE6cyzrY5mnKVJF1Lw4M5WZjqtj&symbol=WLMt&name=Walme%20Token%20(Testnet)&decimals=6)**
+
+> Works on mobile or desktop Phantom with deep link support.
 
 ---
 

@@ -10,63 +10,64 @@ import {
   Transaction,
   sendAndConfirmTransaction,
 } from '@solana/web3.js';
+
 import {
-  createCreateMetadataAccountV3Instruction,
+  createUpdateMetadataAccountV2Instruction,
 } from '@metaplex-foundation/mpl-token-metadata';
 
 async function main() {
   const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-
-  const secretKey = bs58.decode(process.env.PRIVATE_KEY_BASE58!);
-  const payer = Keypair.fromSecretKey(secretKey);
+  const payer = Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY_BASE58!));
 
   const mint = new PublicKey('BxHP1VmR3rd7fZWC5CE6cyzrY5mnKVJF1Lw4M5WZjqtj');
 
-  const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
-    'metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s'
-  );
+  const TOKEN_METADATA_PROGRAM_ID = new PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s');
 
   const [metadataPDA] = await PublicKey.findProgramAddress(
     [
       Buffer.from('metadata'),
       TOKEN_METADATA_PROGRAM_ID.toBuffer(),
-      mint.toBuffer(),
+      mint.toBuffer()
     ],
     TOKEN_METADATA_PROGRAM_ID
   );
 
-  const metadataData = {
+  const newMetadata = {
     name: 'Walme Token (Testnet)',
     symbol: 'WLMt',
     uri: 'https://raw.githubusercontent.com/walme-io/wlm-token/devnet-v1/token-info/wlmt-metadata.json',
     sellerFeeBasisPoints: 0,
-    creators: null,
+    creators: [
+      {
+        address: new PublicKey('3199hHqfCnXx97MWCLdtR6jXyXaBvEjyxqf3iyfg6VcC'),
+        verified: true,
+        share: 100,
+      }
+    ],
     collection: null,
-    uses: null,
+    uses: null
   };
 
-  const instruction = createCreateMetadataAccountV3Instruction(
+  const instruction = createUpdateMetadataAccountV2Instruction(
     {
       metadata: metadataPDA,
-      mint,
-      mintAuthority: payer.publicKey,
-      payer: payer.publicKey,
       updateAuthority: payer.publicKey,
     },
     {
-      createMetadataAccountArgsV3: {
-        data: metadataData,
+      updateMetadataAccountArgsV2: {
+        data: newMetadata,
+        updateAuthority: payer.publicKey,
+        primarySaleHappened: null,
         isMutable: true,
-        collectionDetails: null,
-      },
+      }
     }
   );
 
-  const transaction = new Transaction().add(instruction);
-  const signature = await sendAndConfirmTransaction(connection, transaction, [payer]);
+  const tx = new Transaction().add(instruction);
+  const sig = await sendAndConfirmTransaction(connection, tx, [payer]);
 
-  console.log('Metadata transaction signature:', signature);
-  console.log(`Explorer: https://explorer.solana.com/tx/${signature}?cluster=devnet`);
+  console.log('✅ Metadata updated!');
+  console.log(`🔗 Explorer: https://explorer.solana.com/tx/${sig}?cluster=devnet`);
 }
 
 main().catch(console.error);
