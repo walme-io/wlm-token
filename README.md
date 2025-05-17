@@ -41,11 +41,12 @@ You can add this token to your Phantom wallet using the link below:
 
 ## 🧰 Components
 
-- [`devnet/mint-info.txt`](./devnet/mint-info.txt) — token mint ID
-- [`airdrop-script.sh`](./devnet/airdrop-script.sh) — CLI airdrop tool
-- [`wlmt-metadata.json`](./token-info/wlmt-metadata.json) — token metadata JSON
-- [`vesting-plans.md`](./streamflow/vesting-plans.md) — sample Streamflow configuration
-- [`realms.md`](./governance/realms.md) — Realms DAO setup instructions
+- [`devnet/mint-info.txt`](./devnet/mint-info.txt) — token mint ID  
+- [`airdrop-script.sh`](./devnet/airdrop-script.sh) — CLI airdrop tool  
+- [`wlmt-metadata.json`](./token-info/wlmt-metadata.json) — token metadata JSON  
+- [`vesting-plans.md`](./streamflow/vesting-plans.md) — sample Streamflow configuration  
+- [`realms.md`](./governance/realms.md) — Realms DAO setup instructions  
+- [`burn.md`](./tokenomics/burn.md) — burn mechanism and deflationary utility
 
 ---
 
